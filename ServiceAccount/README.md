@@ -1,4 +1,4 @@
-# <ins> How to use Service Account </ins>
+# <ins> K8s : Service Account </ins>
 
 Have you guys ever wonder that when you access the API Server through kubectl you are authenticated through API controller but how will you acheive the same process from the pod side, so here Service Account role comes into play. As k8s definition itself says **"Processes in containers inside pods can also contact the apiserver. When they do, they are authenticated as a particular Service Account (for example, default)."**
 
