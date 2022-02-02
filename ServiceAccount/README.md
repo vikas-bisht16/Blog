@@ -1,7 +1,11 @@
-# <ins> Service Account </ins>
+# <ins> How to use Service Account </ins>
 
-Definition
+Have you guys ever wonder that when you access the API Server through kubectl you are authenticated through API controller but how will you acheive the same process from the pod side, so here Service Account role comes into play. As k8s definition itself says **"Processes in containers inside pods can also contact the apiserver. When they do, they are authenticated as a particular Service Account (for example, default)."**
 
+<br>
+<br>
+
+## Things we should know about SA
 - Created in a namespace
 - Used to allow a process in a pod access to the API Server.
 - Default service account = default (no access to the api server)
@@ -13,7 +17,7 @@ Definition
 <br>
 
 ## What we will be covering today
-- Creating a pod in default SA
+- Creating a pod (automatically get created in default SA)
 - Will create a SA 
 - Creating a deployment which will be using appsa Service Account.
 - RBAC
@@ -25,7 +29,7 @@ Definition
 <br>
 
 ## **STEP1**
-Creating a pod with a default service account, as we are not mentioning any SA here.
+Creating a pod with a default service account, as we are not mentioning any SA(Service Account) here.
 
 ```
 kubectl run -it --rm alpine --image=alpine -- sh
@@ -58,7 +62,7 @@ jwt <token>
 
 ## **STEP2**
 
-Creating the SA,first you can check the manifest from the below command.
+Creating the SA but before that you can check the manifest from the below command.
 ```
 kubectl create serviceaccount appsa --dry-run=client -o yaml
 
@@ -111,7 +115,7 @@ OUTPUT:
 
 <br>
 
-Above you can see that we got the ca.crt, namespace & token. As we all know that in k8s tokens are base64 encoded, so to decode that we will be using below command,
+Also you can see that we got the ca.crt, namespace & token. As we all know that in k8s tokens are base64 encoded, so to decode that we will be using below command,
 
 ```
 echo <token> | base64 -d
