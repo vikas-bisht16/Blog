@@ -152,7 +152,7 @@ kubectl describe sa alb-ingress-controller -n kube-system
 
 OUTPUT:
 ```
-Kalyans-MacBook-Pro:aws-fargate-eks-masterclass kdaida$ kubectl describe sa alb-ingress-controller -n kube-system
+root@vikas-bisht$ kubectl describe sa alb-ingress-controller -n kube-system
 Name:                alb-ingress-controller
 Namespace:           kube-system
 Labels:              app.kubernetes.io/name=alb-ingress-controller
@@ -223,7 +223,7 @@ kubectl describe sa alb-ingress-controller -n kube-system
 
 OUTPUT:
 ```
-Kalyans-MacBook-Pro:aws-fargate-eks-masterclass kdaida$ kubectl describe sa alb-ingress-controller -n kube-system
+root@vikas-bisht$ kubectl describe sa alb-ingress-controller -n kube-system
 Name:                alb-ingress-controller
 Namespace:           kube-system
 Labels:              app.kubernetes.io/name=alb-ingress-controller
