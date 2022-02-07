@@ -109,7 +109,7 @@ kubectl get secret appsa-token-fzmbd -o yaml
 ```
 OUTPUT:
 
-<img src="./screenshots/get-token.png">
+<img src="./screenshots/appsa-token.png">
 
 ### **NOTE:** Above image has very critical information so kindly do not share it with anyone else.
 
